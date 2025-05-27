@@ -10,35 +10,25 @@ Website hướng đến trải nghiệm mua sắm đơn giản, hiện đại v�
 
 ## 🏗 Kiến trúc hệ thống
 
-Hệ thống được thiết kế theo kiến trúc **MVC (Model - View - Controller)**:
+### ✔️ Kiến trúc MVC
 
-### 1️⃣ Giao diện người dùng (View)
-- Giao diện thân thiện, responsive, hỗ trợ người dùng duyệt giày theo thương hiệu, loại, mức giá.
-- Tìm kiếm, lọc sản phẩm, xem chi tiết và thêm vào giỏ hàng.
-- Hiển thị các bài viết, khuyến mãi và đánh giá sản phẩm.
-
-### 2️⃣ Controller
-- Xử lý các luồng logic nghiệp vụ: thêm giỏ hàng, đặt hàng, xử lý thanh toán, quản trị sản phẩm, v.v.
-- Kiểm tra phân quyền (Admin/Khách hàng).
-- Giao tiếp với database thông qua Model.
-
-### 3️⃣ Model
-- Quản lý dữ liệu của các thực thể: `Product`, `Category`, `Brand`, `User`, `Order`, `Post`, v.v.
-- Tương tác trực tiếp với **SQL database** thông qua Eloquent ORM.
+- **Model**: Đại diện cho dữ liệu và logic nghiệp vụ (Product, Category, User, Order,...)
+- **View**: Giao diện hiển thị cho người dùng bằng Blade template.
+- **Controller**: Điều phối luồng dữ liệu giữa Model và View.
 
 ---
 
 ## 🧩 Các tính năng chính
 
-- ✅ Đăng ký / Đăng nhập người dùng (Laravel Auth)
-- ✅ Trang quản trị viên (Admin Panel) với các chức năng:
+- 🛒 Trang chủ hiển thị sản phẩm nổi bật
+- 🔍 Tìm kiếm, lọc sản phẩm theo danh mục, thương hiệu
+- 📦 Giỏ hàng, đặt hàng, quản lý đơn hàng
+- 👤 Đăng ký, đăng nhập, chỉnh sửa thông tin tài khoản
+- 📰 Xem bài viết tin tức, khuyến mãi
+- ⚙️ Trang quản trị cho Admin:
   - Quản lý sản phẩm, danh mục, thương hiệu
-  - Quản lý đơn hàng, người dùng, bài viết, thống kê
-- ✅ Giỏ hàng & Đặt hàng
-- ✅ Thanh toán khi nhận hàng (COD)
-- ✅ Lọc sản phẩm
-- ✅ Quản lý tài khoản cá nhân
-- ✅ Bài viết tin tức, khuyến mãi
+  - Quản lý bài viết, đơn hàng, người dùng
+  - Thống kê đơn hàng theo ngày/tháng
 
 ---
 
@@ -48,10 +38,10 @@ Hệ thống được thiết kế theo kiến trúc **MVC (Model - View - Contr
 |------------------|-----------------------------|
 | Backend          | Laravel 10.x (PHP 8.x)      |
 | Frontend         | Blade Template, Bootstrap   |
-| Database         | MySQL / SQL (qua Eloquent)  |
-| Authentication   | Laravel Auth (JWT có thể mở rộng) |
-| Storage          | Public folder / S3 (tuỳ chọn) |
-| Deployment       | XAMPP / Laragon / Docker    |
+| Database         | MySQL / SQL (Eloquent ORM)  |
+| Authentication   | Laravel Auth / JWT          |
+| Storage          | Public folder hoặc Cloud (S3) |
+| Server/Dev       | XAMPP / Laragon / Docker    |
 
 ---
 
@@ -61,3 +51,9 @@ Hệ thống được thiết kế theo kiến trúc **MVC (Model - View - Contr
 ```bash
 git clone https://github.com/yourusername/shoestore.git
 cd shoestore
+**### 2️⃣ Cài đặt thư viện**
+bash
+Sao chép
+Chỉnh sửa
+composer install
+npm install && npm run dev
