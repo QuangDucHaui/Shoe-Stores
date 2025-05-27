@@ -49,11 +49,75 @@ Website hướng đến trải nghiệm mua sắm đơn giản, hiện đại v�
 
 ### 1️⃣ Clone dự án
 ```bash
-git clone https://github.com/yourusername/shoestore.git
+git clone https://github.com/QuangDucHaui/shoestore.git
 cd shoestore
-**### 2️⃣ Cài đặt thư viện**
-bash
-Sao chép
-Chỉnh sửa
+```
+
+### 2️⃣ Cài đặt Laravel & các package
+```bash
 composer install
 npm install && npm run dev
+cp .env.example .env
+php artisan key:generate
+```
+
+### 3️⃣ Cấu hình cơ sở dữ liệu
+- Tạo database `shoestore` trong MySQL.
+- Mở file `.env` và chỉnh sửa:
+```
+DB_DATABASE=shoestore
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 4️⃣ Chạy migration và seed dữ liệu mẫu
+```bash
+php artisan migrate --seed
+```
+
+### 5️⃣ Khởi chạy server
+```bash
+php artisan serve
+```
+
+Truy cập tại: `http://localhost:3306`
+
+---
+
+## 🔐 Tài khoản mặc định
+
+### Khách hàng:
+- Email: `dangquangduc210421dte@gmail.com`
+- Mật khẩu: `123456`
+
+### Quản trị viên:
+- Email: `admin@gmail.com`
+- Mật khẩu: `123456`
+
+---
+
+## 📂 Cấu trúc thư mục nổi bật
+```
+app/
+  ├── Models/              → Các model dữ liệu
+  ├── Http/
+  │   ├── Controllers/     → Controllers chính
+  │   └── Middleware/      → Các middleware
+resources/
+  ├── views/               → Blade templates
+routes/
+  └── web.php              → Các route của website
+database/
+  ├── migrations/          → Các file tạo bảng
+  └── seeders/             → Dữ liệu mẫu
+public/
+  └── uploads/             → Ảnh sản phẩm
+```
+
+---
+
+## 📄 Giấy phép
+
+Dự án này được phát hành theo giấy phép [MIT License](https://opensource.org/licenses/MIT).
+
+
