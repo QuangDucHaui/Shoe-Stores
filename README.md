@@ -31,12 +31,12 @@ Hệ thống được thiết kế theo kiến trúc **MVC (Model - View - Contr
 ## 🧩 Các tính năng chính
 
 - ✅ Đăng ký / Đăng nhập người dùng (Laravel Auth)
-- ✅ Trang quản trị (Admin Panel) với các chức năng:
+- ✅ Trang quản trị viên (Admin Panel) với các chức năng:
   - Quản lý sản phẩm, danh mục, thương hiệu
   - Quản lý đơn hàng, người dùng, bài viết, thống kê
 - ✅ Giỏ hàng & Đặt hàng
 - ✅ Thanh toán khi nhận hàng (COD)
-- ✅ Gửi email xác nhận đơn hàng
+- ✅ Lọc sản phẩm
 - ✅ Quản lý tài khoản cá nhân
 - ✅ Bài viết tin tức, khuyến mãi
 
